@@ -1,0 +1,29 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      dryRun:
+        description: dry-run mode
+        required: true
+        default: false
+        type: boolean
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: package.json
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - run: npx semantic-release ${{ inputs.dryRun && '--dry-run' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -27,14 +27,19 @@ bun install --global copylen
 ## Usage
 
 ```shell
-copylen <source-file> --len <number-of-characters>
+Usage: copylen [options] [file-to-path]
 
-# copylen toolarge.json --len 1000
+Copies file content based on character length
+
+Arguments:
+  file-to-path                  File to copy
+
+Options:
+  -V, --version                 output the version number
+  -L, --length, --len <length>  Length of the password
+  -C, --clipboard               Input from clipboard
+  -h, --help                    display help for command
 ```
-
-## Options
-
-- `--len, --length, -L`: Number of characters
 
 ## License
 
