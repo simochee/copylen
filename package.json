@@ -9,6 +9,7 @@
 		"type": "git",
 		"url": "git+https://github.com/simochee/copylen.git"
 	},
+	"license": "MIT",
 	"author": {
 		"name": "simochee",
 		"email": "lollipop@simochee.net",
@@ -17,24 +18,29 @@
 	"type": "module",
 	"exports": {
 		".": {
-			"types": "./lib/index.d.ts",
-			"import": "./lib/index.mjs",
-			"require": "./lib/index.cjs"
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.cjs"
 		}
 	},
-	"main": "./lib/index.cjs",
-	"types": "./lib/index.d.ts",
-	"bin": "./lib/bin.js",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"bin": "./bin/index.mjs",
 	"files": [
-		"lib"
+		"bin",
+		"dist"
 	],
 	"scripts": {
-		"postinstall": "lefthook install"
+		"build": "unbuild",
+		"postinstall": "lefthook install",
+		"stub": "unbuild --stub"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.8.3",
 		"lefthook": "^1.7.0",
-		"sort-package-json": "^2.10.0"
+		"sort-package-json": "^2.10.0",
+		"unbuild": "^2.0.0"
 	},
 	"packageManager": "pnpm@9.5.0+sha256.dbdf5961c32909fb030595a9daa1dae720162e658609a8f92f2fa99835510ca5",
 	"volta": {
@@ -43,5 +49,6 @@
 	"publishConfig": {
 		"access": "public",
 		"provenance": true
-	}
+	},
+	"sideEffect": false
 }
