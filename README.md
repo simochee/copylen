@@ -27,16 +27,17 @@ bun install --global copylen
 ## Usage
 
 ```shell
-Usage: copylen [options] [file-to-path]
+Usage: copylen [options] <length>
 
 Copies file content based on character length
 
 Arguments:
-  file-to-path                  File to copy
+  length              Length of chunk characters
 
 Options:
   -V, --version       output the version number
-  -l, --len <length>  Length of the password
+  -l, --len <length>  Length of chunk characters
+  -f, --file          Input file path
   -c, --clipboard     Input from clipboard
   -h, --help          display help for command
 ```
