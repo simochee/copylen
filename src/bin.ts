@@ -1,23 +1,39 @@
 import { readFile } from "node:fs/promises";
-import { program } from "commander";
+import clipboard from "clipboardy";
+import { InvalidArgumentError, program } from "commander";
 import { copylen } from ".";
 import { description, name, version } from "../package.json";
 import { positiveInt } from "./option";
 
 type Options = {
 	length: number;
+	clipboard?: boolean;
 };
 
 program
 	.name(name)
 	.description(description)
 	.version(version)
-	.argument("<file-to-path>", "File to copy")
+	.argument("[file-to-path]", "Input file path")
 	.option("-L, --length, --len <length>", "Length of the password", positiveInt)
-	.action(async (fileToPath: string, { length }: Options) => {
-		const value = await readFile(fileToPath, "utf-8");
+	.option("-C, --clipboard", "Input from clipboard")
+	.action(
+		async (
+			fileToPath: string,
+			{ length, clipboard: fromClipboard }: Options,
+		) => {
+			if (!fromClipboard && !fileToPath) {
+				throw new InvalidArgumentError(
+					"Expected a file path or clipboard input",
+				);
+			}
 
-		copylen(value, length);
-	});
+			const value = fromClipboard
+				? await clipboard.read()
+				: await readFile(fileToPath, "utf-8");
+
+			copylen(value, length);
+		},
+	);
 
 program.parse(process.argv);

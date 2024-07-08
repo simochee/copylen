@@ -3,6 +3,7 @@ import clipboard from "clipboardy";
 import logUpdate from "log-update";
 import pressAnyKey from "press-any-key";
 import colors from "yoctocolors";
+import { name, version } from "../package.json";
 
 export const copylen = async (input: string, length: number) => {
 	console.log(
@@ -15,14 +16,14 @@ export const copylen = async (input: string, length: number) => {
 		await clipboard.write(input.slice(i * length, (i + 1) * length));
 
 		const message = [
-			`Copied chunk ${i + 1} of ${chunks}`,
+			`Copied chunk: ${i + 1} / ${chunks}`,
 			"",
 			colors.gray("Press any key to copy the next chunk ..."),
 		].join("\n");
 
 		logUpdate(
 			boxen(message, {
-				title: "📋",
+				title: `📋 ${name} v${version}`,
 				titleAlignment: "center",
 				textAlignment: "center",
 				padding: 1,
