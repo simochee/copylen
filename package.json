@@ -1,5 +1,6 @@
 {
 	"name": "copylen",
+	"version": "1.0.0",
 	"description": "Copies file content based on character length",
 	"keywords": [
 		"cli",
@@ -38,7 +39,11 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.8.3",
+		"@tsconfig/node22": "^22.0.0",
+		"@types/node": "^20.14.10",
+		"commander": "^12.1.0",
 		"lefthook": "^1.7.0",
+		"press-any-key": "^1.0.0",
 		"sort-package-json": "^2.10.0",
 		"unbuild": "^2.0.0"
 	},
