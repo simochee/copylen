@@ -1,0 +1,34 @@
+{
+  "name": "copylen",
+  "description": "Copies file content based on character length",
+  "keywords": ["cli", "copy"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simochee/copylen.git"
+  },
+  "author": {
+    "name": "simochee",
+    "email": "lollipop@simochee.net",
+    "url": "https://simochee.net"
+  },
+  "type": "module",
+  "files": ["lib"],
+  "bin": "./lib/bin.js",
+  "main": "./lib/index.cjs",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.cjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "packageManager": "pnpm@9.5.0+sha256.dbdf5961c32909fb030595a9daa1dae720162e658609a8f92f2fa99835510ca5",
+  "volta": {
+    "node": "22.4.0"
+  }
+}
