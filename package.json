@@ -34,7 +34,6 @@
 	],
 	"scripts": {
 		"build": "unbuild",
-		"postinstall": "lefthook install",
 		"stub": "unbuild --stub"
 	},
 	"release": {
@@ -42,21 +41,19 @@
 			"main"
 		]
 	},
-	"dependencies": {
-		"boxen": "^7.1.1",
-		"clipboardy": "^4.0.0",
-		"commander": "^12.1.0",
-		"log-update": "^6.0.0",
-		"press-any-key": "^1.0.0",
-		"yoctocolors": "^2.1.1"
-	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.8.3",
 		"@tsconfig/node22": "^22.0.0",
 		"@types/node": "^20.14.10",
+		"boxen": "^7.1.1",
+		"clipboardy": "^4.0.0",
+		"commander": "^12.1.0",
 		"lefthook": "^1.7.0",
+		"log-update": "^6.0.0",
+		"press-any-key": "^1.0.0",
 		"sort-package-json": "^2.10.0",
-		"unbuild": "^2.0.0"
+		"unbuild": "^2.0.0",
+		"yoctocolors": "^2.1.1"
 	},
 	"packageManager": "pnpm@9.5.0+sha256.dbdf5961c32909fb030595a9daa1dae720162e658609a8f92f2fa99835510ca5",
 	"volta": {
