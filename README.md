@@ -1,8 +1,15 @@
 # copylen
 
+[![npm version](https://badge.fury.io/js/copylen.svg)](https://badge.fury.io/js/copylen)
+[![Release](https://github.com/simochee/copylen/actions/workflows/release.yaml/badge.svg)](https://github.com/simochee/copylen/actions/workflows/release.yaml)
+
 📋 A simple, intuitive CLI tool to copy content from a file based on character length.
 
+Cross-platform Supports: macOS, Windows, Linux.
+
 ## Installation
+
+[npm](https://docs.npmjs.com/cli/v6/commands/npm) · [yarn](https://yarnpkg.com/) · [pnpm](https://pnpm.io/) · [bun](https://bun.sh/)
 
 ```shell
 # npm
