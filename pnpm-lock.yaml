@@ -17,6 +17,9 @@ importers:
       commander:
         specifier: ^12.1.0
         version: 12.1.0
+      copylen:
+        specifier: 1.0.5
+        version: 1.0.5
       log-update:
         specifier: ^6.0.0
         version: 6.0.0
@@ -696,6 +699,10 @@ packages:
 
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
+
+  copylen@1.0.5:
+    resolution: {integrity: sha512-Q/+qiQWPIvNpnvgfQyST6vu1ju94UzwejnvFV8gwq5nSjZWhZpOGRjD6Rf5DGxvXBYoubiAzSQqR0Rd46PhTaQ==}
+    hasBin: true
 
   cross-spawn@7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
@@ -2114,6 +2121,14 @@ snapshots:
   consola@3.2.3: {}
 
   convert-source-map@2.0.0: {}
+
+  copylen@1.0.5:
+    dependencies:
+      boxen: 7.1.1
+      clipboardy: 4.0.0
+      commander: 12.1.0
+      log-update: 6.0.0
+      yoctocolors: 2.1.1
 
   cross-spawn@7.0.3:
     dependencies:

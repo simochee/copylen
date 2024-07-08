@@ -6,7 +6,7 @@ import { description, name, version } from "../package.json";
 import { positiveInt } from "./option";
 
 type Options = {
-	length: number;
+	len: number;
 	clipboard?: boolean;
 };
 
@@ -18,10 +18,7 @@ program
 	.option("-l, --len <length>", "Length of the password", positiveInt)
 	.option("-c, --clipboard", "Input from clipboard")
 	.action(
-		async (
-			fileToPath: string,
-			{ length, clipboard: fromClipboard }: Options,
-		) => {
+		async (fileToPath: string, { len, clipboard: fromClipboard }: Options) => {
 			if (!fromClipboard && !fileToPath) {
 				throw new InvalidArgumentError(
 					"Expected a file path or clipboard input",
@@ -32,7 +29,7 @@ program
 				? await clipboard.read()
 				: await readFile(fileToPath, "utf-8");
 
-			copylen(value, length);
+			copylen(value, len);
 		},
 	);
 
