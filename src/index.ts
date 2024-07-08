@@ -1,9 +1,9 @@
 import boxen from "boxen";
 import clipboard from "clipboardy";
 import logUpdate from "log-update";
-import pressAnyKey from "press-any-key";
 import colors from "yoctocolors";
 import { name, version } from "../package.json";
+import { waitForAnyKey } from "./keyboard";
 
 export const copylen = async (input: string, length: number) => {
 	console.log(
@@ -32,7 +32,7 @@ export const copylen = async (input: string, length: number) => {
 		);
 
 		if (chunks > 1) {
-			await pressAnyKey("", { hideMessage: true });
+			await waitForAnyKey();
 		}
 	}
 
