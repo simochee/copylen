@@ -15,8 +15,8 @@ program
 	.description(description)
 	.version(version)
 	.argument("[file-to-path]", "Input file path")
-	.option("-L, --length, --len <length>", "Length of the password", positiveInt)
-	.option("-C, --clipboard", "Input from clipboard")
+	.option("-l, --len <length>", "Length of the password", positiveInt)
+	.option("-c, --clipboard", "Input from clipboard")
 	.action(
 		async (
 			fileToPath: string,

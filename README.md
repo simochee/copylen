@@ -35,10 +35,10 @@ Arguments:
   file-to-path                  File to copy
 
 Options:
-  -V, --version                 output the version number
-  -L, --length, --len <length>  Length of the password
-  -C, --clipboard               Input from clipboard
-  -h, --help                    display help for command
+  -V, --version       output the version number
+  -l, --len <length>  Length of the password
+  -c, --clipboard     Input from clipboard
+  -h, --help          display help for command
 ```
 
 ## License
