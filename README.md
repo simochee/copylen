@@ -39,14 +39,14 @@ Usage: copylen [options] <length>
 Copies file content based on character length
 
 Arguments:
-  length              Length of chunk characters
+  length                     Length of chunk characters
 
 Options:
-  -V, --version       output the version number
-  -l, --len <length>  Length of chunk characters
-  -f, --file          Input file path
-  -c, --clipboard     Input from clipboard
-  -h, --help          display help for command
+  -V, --version              output the version number
+  -l, --len <length>         Length of chunk characters
+  -f, --file <path-to-file>  Input file path
+  -c, --clipboard            Input from clipboard
+  -h, --help                 display help for command
 ```
 
 ## License

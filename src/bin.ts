@@ -16,7 +16,7 @@ program
 	.version(version)
 	.argument("<length>", "Length of chunk characters", positiveInt)
 	.option("-l, --len <length>", "Length of chunk characters", positiveInt)
-	.option("-f, --file", "Input file path")
+	.option("-f, --file <path-to-file>", "Input file path")
 	.option("-c, --clipboard", "Input from clipboard")
 	.action(
 		async (length: number, { file, clipboard: fromClipboard }: Options) => {
