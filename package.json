@@ -34,6 +34,7 @@
 	],
 	"scripts": {
 		"build": "unbuild",
+		"prepublishOnly": "pnpm run build",
 		"stub": "unbuild --stub"
 	},
 	"release": {
@@ -45,7 +46,6 @@
 		"boxen": "^7.1.1",
 		"clipboardy": "^4.0.0",
 		"commander": "^12.1.0",
-		"copylen": "1.0.5",
 		"log-update": "^6.0.0",
 		"yoctocolors": "^2.1.1"
 	},
